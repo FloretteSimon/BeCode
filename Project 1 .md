@@ -57,7 +57,7 @@ Backups are placed on a partition located on separate disk, this partition must 
         > grant all privileges on glpi_db.*to adminglpi@localhost
         > flush privileges
         > exit
-  2 apache2
+  2/ apache2
     ° sudo apt install apache2
     ° sudo apt install apache2 libapache2-mod-php
   3/ PHP 
@@ -68,7 +68,19 @@ Backups are placed on a partition located on separate disk, this partition must 
     ° sudo apt install php-mbstring (particulièrement utile pour les applications Web multilingues ou qui manipulent des données textuelles provenant de différentes sources encodées.)
     ° sudo apt install php-xml (utile pour le développement d'applications Web qui communiquent avec des services Web basés sur XML ou qui manipulent des données XML, telles que des flux de données ou des configurations.)
     ° sudo apt install php-zip (particulièrement utile pour les applications Web qui nécessitent la manipulation de fichiers compressés, tels que les téléchargements et les archives de fichiers.)
-    ° sudo apt install php-json
+  4/ sudo nano /etc/apache2/sites-available/000-default.conf
+      ° <Directory /var/www/html>
+          options Indexes FollowSymLinks
+          AllowOverride All
+          Require all granted
+        </Directory>
+  5/ cd tmp
+     sudo wget https://github.com/glpi-project/glpi/releases/download/10.0.14/glpi-10.0.14.tgz  
+     tar xvf glpi-10.0.14
+     shopt -s dotglob
+     rm /var/www/html/index.html
+     sudo cp -r glpi/* /var/www/html
+     sudo chmod -R www-data /var/www/html/
 
 
 
