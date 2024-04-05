@@ -108,8 +108,29 @@ Backups are placed on a partition located on separate disk, this partition must 
   6/ sudo nano stub-resolv.conf
     - name server 127.0.0.1
 
+  ## Weekly backup the configuration files for each service into one single compressed archive
+  1/ sudo mkdi back_up
+
+  2/ sudo nano Back_Up_Config.sh
+  #!/bin/bash
+
+  ### Backup directory
+backup_dir="/back_up"
+
+  ### Create a directory for weekly backup
+weekly_backup_dir="$backup_dir/$(date +%Y-%m-%d)"
+mkdir -p "$weekly_backup_dir"
+
+ ### Backup configuration files for each service
+cp /back_up/config_file1 "$weekly_backup_dir"
+cp /back_up/config_file2 "$weekly_backup_dir"
+
+### Create a compressed archive of the backup
+tar -czf "$backup_dir/weekly_backup_$(date +%Y-%m-%d).tar.gz" -C "$backup_dir" "$(date +%Y-%m-%d)"
 
 
+3/ sudo crontab -e
+- 0 2 * * 0 /back_up/Back_Up_Config.sh
 
 # One workstation running a desktop environment and the following apps:
 
@@ -131,7 +152,7 @@ Via KALI LINUX
     iface enp0s1 inet dhcp
 
   ## LibreOffice etc
-  1
+  1/ sudo apt install li
 
 
 
