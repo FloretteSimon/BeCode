@@ -152,7 +152,11 @@ Via KALI LINUX
     iface enp0s1 inet dhcp
 
   ## LibreOffice etc
-  1/ sudo apt install li
+  1/ sudo apt install libreoffice
+
+  2/ sudo apt install gimp
+
+  
 
 
 
