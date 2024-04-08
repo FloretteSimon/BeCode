@@ -74,10 +74,42 @@ Log files are files that contain records of events, actions, or transactions tha
 Log files are typically stored in text format, making them human-readable and easily parseable. They may be stored locally on the system or centralized on a logging server for easier management and analysis. Log files can vary in size and frequency of rotation, depending on the logging configuration and system requirements. Regular log file analysis is essential for maintaining system health, security, and performance.
 
 
+## Where can you fin them on a typical Linux system ?
+
+On a typical Linux system, logs are typically located in the /var/log
+
+## How can you check who where the last connected users, what they did, when they left ?
+ Here are some methods:
+ 1: last command: This will display a list of users who have logged in, along with the login time, duration of the session, and logout time (if available). If a user is still logged in, it will display (still logged in) instead of a logout time.
+
+ 2: w command: Shows who is currently logged in and what they are doing. It also displays login times and idle times.
+
+ 3: /var/log/wtmp: Contains historical login records, including login and logout times. You can use the last command to read this file and display the login history. Similarly, /var/run/utmp contains current login records.
+
+ 4: .bash_history: Each user typically has a .bash_history file in their home directory that logs their command-line activity. You can inspect these files to see what commands were executed.
+
+ 5: Syslog and Audit Logs: System logs (/var/log/syslog, /var/log/messages, etc.) may contain information about user logins and logouts, especially if auditing is enabled. You can search these logs for relevant entries using tools like grep
+
+ 6: Journalctl: If your system uses systemd, you can use journalctl to view system logs, including user login/logout events.
+
+ ## What are the different metrics of health and performance of a system ?
+
+The metrics of health and performance of a system can be broadly categorized into several key areas, each providing insights into different aspects of the system's functioning. Here are the main categories:
+
+- Resource Utilization
+- Performance
+- Availability and Reliability
+- Error and Exception Handling
+- Security
+- Scalability and Capacity Planning
+- User Experience
 
 
+  ## How can you check the uptime of a machine ?
+  Using the uptime command: This command will display the current time, how long the system has been running, the number of users logged in, and the system load averages for the past 1, 5, and 15 minutes.
 
-
+  ## How can you assess the network traffic ?
+  Wireshark: Wireshark is a popular network protocol analyzer that allows you to capture and inspect the traffic on a network in real-time. It provides detailed information about individual packets, protocols, and conversations.
 
 
 
