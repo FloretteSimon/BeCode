@@ -37,6 +37,8 @@ Sources:
 https://www.logpoint.com/fr/blog/le-guide-complet-de-lanalyse-de-logs/
 ChatGPT
 https://medium.com/@btk667/cest-quoi-un-rapport-soc2-def8c4506cef
+https://openclassrooms.com/fr/courses/1750566-optimisez-la-securite-informatique-grace-au-monitoring/7144124-tirez-le-maximum-de-ce-cours
+https://cyber.gouv.fr/uploads/IMG/pdf/NP_Journalisation_NoteTech.pdf
 
 
 
@@ -123,24 +125,43 @@ The metrics of health and performance of a system can be broadly categorized int
   ## What is SIEM?:
   SIEM (Security Information and Event Management) is an IT tool designed to provide a consolidated, real-time view of security information on a computer system or network. SIEM solutions collect, aggregate and analyze data from a      variety of sources, such as event logs, network data streams, intrusion detection systems, firewalls, intrusion prevention systems and so on. The main objective of a SIEM is to detect and respond to security threats by identifying    suspicious or malicious patterns of activity.
 
-  ## Differents SOC reports:
-  - SOC 1 - Internal Controls over Financial Reporting (ICFR)
-  - SOC 2 - Trust services criteria
-  - SOC 3 - General usage report on trust service criteria
-  - SOC for cybersecurity
-  - SOC for supply chain
 
-  
+  ## The following table gives an overview of the logs that can be found under Linux. Most logs are stored in /var/log/. There may be additional logs depending on the program.
+<img width="183" alt="Capture d’écran 2024-04-08 à 15 55 40" src="https://github.com/FloretteSimon/BeCode/assets/155719677/58ff76b2-23f3-4b03-9154-e383d5d00bb2">
 
 
+  ## What is log collection management?
+  Managing your log collection involves setting up logging and centralization systems. Logging is the implementation of a system enabling automatic log reporting. Sending your logs to a central point describes centralization, which     will give you a global view of events on the information system.
+  Log management has several objectives:
+- Obtain a general overview of the IS and identify abnormal events.
+- Detect intrusions, for example using IPS/IDS solutions or SIEM rules.
+- Trace the history and actions of an attacker as part of a forensic investigation.
+  Visualize IS actions, define statistics and identify weak signals.
 
+  ## Which logs are relevant to monitor?
+  The following is a list of logs of interest for IS security monitoring:
+  - Authentification.
+  - Gestion des comptes et des droits.
+  - Accès aux ressources.
+  - Modification des stratégies de sécurité.
+  - Activité des processus. 
+  - Activité des systèmes.
 
+  ## What is the parsing of log?
+  In the event of a security incident, or simply as part of daily monitoring, it can be useful to explore logs manually, also known as log parsing.
+  - Extract words with grep
+  - Cut file lines with awk: Awk is another utility available on any Linux system. With awk, you can thoroughly parse your log files.
+  - Display log output in real time with tail. When you need to monitor ongoing processes, such as restarting a service or testing a modification, tail is a good tool to know. Tail is another command-line tool that displays the           latest modifications to a file. You can also use it to display the last lines of a file, or combine it with grep to filter the output of a log file.
+    The "-f" optiondisplays log output in real time: $ tail -f syslog$
+    <img width="204" alt="Capture d’écran 2024-04-08 à 16 17 38" src="https://github.com/FloretteSimon/BeCode/assets/155719677/4f245253-cfe7-4670-abf8-b49f41ae7efa">
 
-
-
-
-
-
+  ## What's syslog?
+  The syslog protocol is used to send and receive logs in a particular format from various systems. Messages include timestamps, event messages, criticality, IP addresses, diagnostics, etc., but in a digestible way.
+  The syslog protocol is designed to monitor network and system devices to send notification messages in the event of malfunctions. It can also send alerts for pre-notified events, and monitor suspicious activity via the various        monitoring logs.
+  There are 3 different versions of syslog:
+  - Syslog : the initial version just discussed. The other versions are enhanced versions.
+  - Syslog-ng: extends the initial functionality by adding content-based filtering, TCP support and TLS encryption.
+  - Rsyslog: the latest and most widely used version.
 
 
 
