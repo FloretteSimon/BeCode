@@ -62,9 +62,11 @@ In summary, using the ELK package with ELK SIEM for SOC reporting provides a com
 
 ## ATT&CK matrix
 ATT&CK matrix:
+
 °Lists attackers' methods by :
 - their tactics, a series of progressive actions to carry out a cyber attack,
 - their techniques, the different specific methods for carrying out a tactic ;
+
 °Establishes a common vocabulary and helps SOC teams strengthen their architectures by simulating real attacks.
 
 Why use ATT&CK matrix in a SOC report:
