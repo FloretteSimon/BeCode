@@ -34,6 +34,18 @@ Why use snort in a SOC report:
 
 In short, Snort is a powerful tool for network threat detection, making it an essential part of any SOC report. Using Snort, you can quickly detect malicious activity on your network, analyze the alerts generated and take action to protect your organization against cyber threats.
 
+OR/AND
+
+Why use Wireshark is a SOC report:
+- Network threat detection: Wireshark enables security analysts to capture and analyze network traffic in real time, enabling them to detect malicious activity such as port scans, denial-of-service attacks, vulnerability exploitation attempts, suspicious communications and other abnormal network behavior.
+- Security incident investigation: When a security incident is detected, Wireshark can be used to capture network traffic associated with the incident to understand its origin, scope and effects. Security analysts can examine network packets in detail to identify the sources of the attack, the attack vectors used and associated malicious activity.
+- Forensic network analysis: Wireshark is an invaluable tool for forensic investigation of compromised network infrastructures. Network traffic captures made with Wireshark can be used to reconstruct event histories, identify traffic anomalies, collect digital evidence and help determine the extent of damage caused by an attack.
+- Identifying indicators of compromise (IOCs): Wireshark enables security analysts to identify indicators of compromise (IOCs) in network traffic, such as suspicious IP addresses, malicious domain names, known attack signatures and so on. This information can be used to improve threat detection rules and enhance network security.
+- Security incident response: Using Wireshark, security teams can quickly identify the sources and vectors of an attack, enabling them to take swift corrective action to mitigate risks, block attackers and restore network integrity.
+
+In short, Wireshark is an essential tool for security teams working in an SOC, as it provides in-depth visibility into network traffic, enables early detection of threats, facilitates the investigation of security incidents and helps reinforce the organization's overall security posture.
+
+
 ## ELK + ELK SIEM
 https://openclassrooms.com/fr/courses/1750566-optimisez-la-securite-informatique-grace-au-monitoring/7145362-installez-elk
 ELK enables data indexing and analysis. It is possible, for example, to load different types of data, such as logs, and visualize them in the form of customized diagrams.
