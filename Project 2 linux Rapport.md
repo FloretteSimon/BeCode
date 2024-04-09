@@ -77,24 +77,3 @@ Why use ATT&CK matrix in a SOC report:
 - Security posture assessment: The ATT&CK matrix can be used as a framework for assessing an organization's security posture. By comparing the techniques listed in the matrix with the security controls in place, organizations can identify security gaps and implement corrective measures to strengthen their defense against attacks.
 
 In summary, the ATT&CK matrix is a valuable tool for security teams working in an SOC, as it provides a detailed reference of the tactics and techniques used by attackers, helping them to better understand threats, detect security incidents and strengthen their overall security posture.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
