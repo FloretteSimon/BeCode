@@ -163,10 +163,32 @@ The metrics of health and performance of a system can be broadly categorized int
   - Syslog-ng: extends the initial functionality by adding content-based filtering, TCP support and TLS encryption.
   - Rsyslog: the latest and most widely used version.
 
+  ## The logs are classified according to several themes
+  <img width="539" alt="Capture d’écran 2024-04-09 à 09 12 04" src="https://github.com/FloretteSimon/BeCode/assets/155719677/7bfd34f4-3a28-4b97-983c-fd1405eae756">
+
+  ## Logs are also sorted by log level
+  <img width="313" alt="Capture d’écran 2024-04-09 à 09 15 00" src="https://github.com/FloretteSimon/BeCode/assets/155719677/39360559-bfa3-4068-a353-d4456f387300">
+
+  ## IDS et IPS
+  IDS(Intrusion Detection System) are network intrusion detection tools. IPS(Intrusion Prevention System), on the other hand, block intrusion on the network by means of rules.
+
+  ## Stack ELK
+  ELK is an open source suite comprising 3 main components: Elasticsearch, Logstash and Kibana. Beats was then added to form the ELK stack. ELK enables data indexing and analysis. It is possible, for example, to load different types    of data, such as logs, and visualize them in the form of customized diagrams.
+  Each letter represents a specific component:
+  - Elasticsearch(https://www.elastic.co/guide/index.html#install-beats): This is a distributed data search and analysis engine, designed to store, search and analyze large volumes of data in real time. Elasticsearch is used as a         database to store logs and other data for analysis.
+  - Logstash (https://www.elastic.co/guide/en/logstash/current/getting-started-with-logstash.html): Logstash is a data processing tool that ingests, transforms and sends logs and other data to Elasticsearch for subsequent indexing         and analysis. It can also be used to enrich data with additional information before storing it in Elasticsearch.
+  - Kibana: Kibana is a data visualization and exploration interface that integrates with Elasticsearch. It enables users to create interactive dashboards, charts and visualizations based on data stored in Elasticsearch. Kibana makes     it easy to analyze and understand logs and other data.
+
+   ## SIEM with ELK
+  The integration of SIEM (Security Information and Event Management) functionality with ELK (Elasticsearch, Logstash, Kibana) offers several significant advantages for IT security management:
+  - Event correlation: SIEMs are designed to collect and correlate security events from a variety of sources, enabling the detection of suspicious patterns of activity or potential threats. By integrating ELK into a SIEM, you can         benefit from Elasticsearch's ability to store and query vast volumes of data quickly and efficiently, making it easier to correlate events and identify security incidents.
+  - Advanced log analysis: ELK offers powerful log analysis capabilities, enabling log data to be searched, queried and visualized in a flexible, granular way. By integrating ELK with a SIEM, security analysts can leverage these          features to perform in-depth log analysis, identify trends, detect anomalies and investigate security incidents.
+  - Security data visualization: Kibana, as ELK's visualization interface, enables the creation of customized dashboards and visualizations to visually represent security data. By integrating Kibana with a SIEM, security teams can        create interactive dashboards and graphical visualizations to monitor security status in real time, quickly identify potential problems and effectively communicate security information to other stakeholders.
+  - Scalability and flexibility: Elasticsearch, as a distributed search and analysis engine, offers great scalability and flexibility for managing large volumes of security data. This capability makes it possible to efficiently           manage the growth of log data and adapt to evolving security needs.
+    In summary, the integration of SIEM functionality with ELK enhances organizations' ability to detect, analyze and respond to security threats effectively, by leveraging the advanced data analysis and visualization capabilities        offered by ELK.
 
 
-
-
+    
 
 
 
