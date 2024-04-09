@@ -185,8 +185,18 @@ The metrics of health and performance of a system can be broadly categorized int
   - Advanced log analysis: ELK offers powerful log analysis capabilities, enabling log data to be searched, queried and visualized in a flexible, granular way. By integrating ELK with a SIEM, security analysts can leverage these          features to perform in-depth log analysis, identify trends, detect anomalies and investigate security incidents.
   - Security data visualization: Kibana, as ELK's visualization interface, enables the creation of customized dashboards and visualizations to visually represent security data. By integrating Kibana with a SIEM, security teams can        create interactive dashboards and graphical visualizations to monitor security status in real time, quickly identify potential problems and effectively communicate security information to other stakeholders.
   - Scalability and flexibility: Elasticsearch, as a distributed search and analysis engine, offers great scalability and flexibility for managing large volumes of security data. This capability makes it possible to efficiently           manage the growth of log data and adapt to evolving security needs.
+
     In summary, the integration of SIEM functionality with ELK enhances organizations' ability to detect, analyze and respond to security threats effectively, by leveraging the advanced data analysis and visualization capabilities        offered by ELK.
 
+    ## ATT&CK matrix (https://attack.mitre.org/matrices/enterprise/linux/)
+    The ATT&CK matrix lists the tactics and techniques used by attackers during an attack. It is a knowledge base based on real-world observations.
+    The matrix is a versatile tool that makes Red Team exercises more effective, by setting up real attack scenarios and copying known operating modes. It also provides SOC teams with a concise and comprehensive presentation of the       attack lifecycle. Thanks to its diagrams, SOC teams have the means to understand attackers, in order to evaluate current controls and defense mechanisms.
+    The matrix will help you answer the following questions:
+    - On which tactics are our surveillance resources weakest?
+    - Which are the riskiest for our environment and our business?
+    - Which techniques can be detected using the matrix, and how can we reduce the gap?
+    - Which techniques lack practical prevention and controls, and therefore become more critical for detection?
+    When you identify tactics or techniques where your organization needs better detection, the matrix provides the technical details to help you. Eventually, it enables you to create monitoring rules or set up proactive controls,        with the aim of detecting threats present on the system.
 
     
 
