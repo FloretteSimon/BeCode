@@ -61,9 +61,17 @@ Even though the modern IT ecosystem is full of wonderfully designed tools it's a
 | ---------------------------------------------------- | -------------------------------------- |
 
 <img width="637" alt="Capture d’écran 2024-04-10 à 09 53 13" src="https://github.com/FloretteSimon/BeCode/assets/155719677/b9fcec0f-45ed-4d94-9239-200a915fcda3">
-<img width="126" alt="Capture d’écran 2024-04-10 à 10 03 57" src="https://github.com/FloretteSimon/BeCode/assets/155719677/8be3e1a7-f95c-4492-a865-117f9a4cd46c">
+<img width="324" alt="Capture d’écran 2024-04-10 à 10 05 27" src="https://github.com/FloretteSimon/BeCode/assets/155719677/65522b40-b855-409b-912a-85513d452aec">
+<img width="350" alt="Capture d’écran 2024-04-10 à 10 10 08" src="https://github.com/FloretteSimon/BeCode/assets/155719677/94564ff1-b36e-4cae-b0d7-a02d43c9b84e">
+<img width="350" alt="Capture d’écran 2024-04-10 à 10 10 31" src="https://github.com/FloretteSimon/BeCode/assets/155719677/0a792f12-e275-4e99-bceb-b5c7934c2622">
+https://www.youtube.com/watch?v=7Od-gg01MVE
+https://crontab.guru/
+https://www.youtube.com/watch?v=4G_cthFZeJ8
+https://github.com/metal3d/bashsimplecurses
+
 
 ## Step 1: Decide which metrics to monitor
+
 - CPU Usage
 - Memory Usage
 - Disk Usage
@@ -75,7 +83,19 @@ Even though the modern IT ecosystem is full of wonderfully designed tools it's a
 - Hardware Health
 - Backup Status
 
-## 
+## Step 2: Install bash simple curse
+
+1/ cd /usr/local/lib/
+2/ git clone https://github.com/metal3d/bashsimplecurses.git
+
+## Step 3: Create the bash file
+1/ cd BeCodeMonitoring
+2/ sudo nano Monitoring.sh:
+  - #!/bin/bash
+  - #import library curse
+  - source /usr/local/lib/bashsimplecurses/simple_curses.sh
+  - 
+
 
 
 
