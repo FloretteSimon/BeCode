@@ -222,11 +222,40 @@ sudo chmod +x Monitoring.sh
 <img width="1226" alt="Capture d’écran 2024-04-11 à 14 25 49" src="https://github.com/FloretteSimon/BeCode/assets/155719677/e422f3ce-d3df-4161-9384-8712b4e4a06e">
 
 
+## Step 10:  Deploy your script on a machine you manage and use something like [cron](https://en.wikipedia.org/wiki/Cron) to execute once an hour.
+
+- sudo cp Monitoring.sh /usr/local/lib/
+
+- crontab -e
+
+- 0 * * * * /usr/local/lib/Monitoring.sh
 
 
+## Step 11: Collect metrics every hour and store them in an [CSV file](https://en.wikipedia.org/wiki/Comma-separated_values)
+- sudo nano ScriptForCSV.sh
+  
+- #!/bin/bash
+
+#Date and time
+
+current_datetime=$(date +"%Y-%m-%d %H:%M:%S")
+
+#Monitoring script
+
+MonitoringScript="/usr/local/lib/Monitoring.sh"
+
+bash "$MonitoringScript"
+
+#CSV file
+
+echo "$current_datetime,$MonitoringScript" >> "Monitoring.csv"
 
 
+- sudo chmod +x ScriptForCSV.sh
 
+- crontab -e : 0 * * * * /usr/local/lib/ScriptForCSV.sh
+
+- sudo touch Monitoring.csv
 
 
 
