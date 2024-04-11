@@ -77,19 +77,16 @@ https://github.com/metal3d/bashsimplecurses
 - Disk Usage
 - Network Traffic
 - System Uptime
-- Application Performance
-- Security Events
-- Logs and Error Messages
-- Hardware Health
-- Backup Status
 
 ## Step 2: Install bash simple curse
 
 1/ cd /usr/local/lib/
+
 2/ git clone https://github.com/metal3d/bashsimplecurses.git
 
 ## Step 3: Create the bash file
 1/ cd BeCodeMonitoring
+
 2/ sudo nano Monitoring.sh
 
 ## Step 4: CPU 
@@ -102,7 +99,7 @@ source /usr/local/lib/bashsimplecurses/simple_curses.sh
 #Main
 main () {
         #CPU
-        window "CPU Usage" "red"
+        window "CPU Usage" "red" "50%"
         current_date=$(date +"%Y-%m-%d")
 
         for i in {2..6}; do
@@ -145,19 +142,84 @@ main_loop
 
 - main_loop: This likely starts a loop to continuously run the main function, allowing the user interface to remain open and responsive.
 
+## Step 5: Memory Usage
+ #Memory Usage
+ 
+        window "Memory Usage" "magenta" "50%"`
+        
+        #total
+        
+        append_tabbed `cat /proc/meminfo | awk '/MemTotal/ {print "Total:" $2/1024}'` 2
+        
+        #used
+        
+        append_tabbed `cat /proc/meminfo | awk '/MemFree/ {print "Used:" $2/1024}'` 2
+        
+        endwin
+
+
+- #Memory Usage: This is a comment indicating that the following lines of code relate to memory usage.
+
+- window "Memory Usage" "magenta" "50%": This line creates a window with the title "Memory Usage" and a magenta background color. It specifies that the window should occupy 50% of the terminal's width.
+  
+- #total: This is a comment indicating that the following line of code retrieves total memory information.
+
+- append_tabbed `cat /proc/meminfo | awk '/MemTotal/ {print "Total:" $2/1024}'` 2: This line executes a command within backticks () and appends the result to the window. The command cat /proc/meminfo | awk '/MemTotal/ {print "Total:" $2/1024}'reads the/proc/meminfo` file, searches for the line containing "MemTotal", and prints "Total:" followed by the total memory in megabytes (MiB). The result is appended to the window with a tab offset of 2.
+
+- #used: This is a comment indicating that the following line of code retrieves used memory information.
+
+- append_tabbed `cat /proc/meminfo | awk '/MemFree/ {print "Used:" $2/1024}'` 2: Similar to the previous line, this line retrieves the amount of free memory from the /proc/meminfo file and prints it in megabytes (MiB). The result is appended to the window with a tab offset of 2.
+
+- endwin: This line marks the end of the window creation process.
+
+## Step 6: Disk Usage
+
+ #Disk Usage
+        
+        window "Disk Usage" "cyan" "70%"
+        
+        iostat -d
+        
+        endwin
+
+- #Disk Usage: This is a comment indicating that the following lines of code relate to disk usage.
+
+- window "Disk Usage" "cyan" "70%": This line creates a window with the title "Disk Usage" and a cyan color. It specifies that the window should occupy 70% of the terminal's width.
+
+- iostat -d: This command executes the iostat command with the -d option, which provides detailed statistics about disk usage. The output of this command will be displayed within the window.
+
+- endwin: This line marks the end of the window creation process.
+
+
+## Step 7: Network
 
 
 
+## Step 8: System Uptime
+
+#System Uptime
+
+        window "System Uptime" "yellow" "80%"
+        
+        sudo uptime
+        
+        endwin
 
 
+- #System Uptime: This is a comment indicating that the following lines of code relate to displaying system uptime.
+
+- window "System Uptime" "yellow" "80%": This line creates a window titled "System Uptime" with a yellow color. The window will occupy 80% of the terminal's width.
+
+- sudo uptime: This command executes the uptime command with superuser privileges (using sudo). The uptime command provides information about how long the system has been running, the number of users currently logged in, and the load averages for the system over the last 1, 5, and 15 minutes.
+
+- The output of the uptime command will be displayed within the window created earlier.
+
+- endwin: This line marks the end of the window creation process.
 
 
-
-
-
-
-
-
+## Step 9: Make it executable
+sudo chmod +x Monitoring.sh
+<img width="1226" alt="Capture d’écran 2024-04-11 à 14 25 49" src="https://github.com/FloretteSimon/BeCode/assets/155719677/e422f3ce-d3df-4161-9384-8712b4e4a06e">
 
 
 
