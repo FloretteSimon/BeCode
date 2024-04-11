@@ -90,11 +90,60 @@ https://github.com/metal3d/bashsimplecurses
 
 ## Step 3: Create the bash file
 1/ cd BeCodeMonitoring
-2/ sudo nano Monitoring.sh:
-  - #!/bin/bash
-  - #import library curse
-  - source /usr/local/lib/bashsimplecurses/simple_curses.sh
-  - 
+2/ sudo nano Monitoring.sh
+
+## Step 4: CPU 
+                                             
+#!/bin/bash
+
+#Source Curses
+source /usr/local/lib/bashsimplecurses/simple_curses.sh
+
+#Main
+main () {
+        #CPU
+        window "CPU Usage" "red"
+        current_date=$(date +"%Y-%m-%d")
+
+        for i in {2..6}; do
+        # Capture process information
+        process_info=$(ps ax -o pid,rss,pcpu,ucmd --sort=-cpu,-rss | sed -n "$i,$i p" | awk '{printf "%s: %smo:  %s%%", $4, $2/1024, $3 }')
+    
+         # Combine process info with date
+        formatted_line="$current_date  $process_info"
+  
+         # Append formatted line to window
+         append_tabbed "$formatted_line" 3
+        done
+        endwin
+}
+main_loop
+
+- #!/bin/bash: This is called a shebang line, and it indicates to the operating system that the script should be executed using the Bash shell.
+
+- source /usr/local/lib/bashsimplecurses/simple_curses.sh: This line sources (loads) a Bash script named simple_curses.sh from the specified path (/usr/local/lib/bashsimplecurses/). This script likely contains functions for creating simple curses-based user interfaces.
+
+- main () {: This line defines a function named main. In Bash, functions are defined using the function_name() { ... } syntax.
+
+- window "CPU Usage" "red": This line creates a window with the title "CPU Usage" and a red background color. It's likely a function provided by the simple_curses.sh script.
+
+- current_date=$(date +"%Y-%m-%d"): This line uses the date command to get the current date in the format "YYYY-MM-DD" and stores it in the variable current_date.
+
+- for i in {2..16}; do: This line starts a loop that iterates from 2 to 16 inclusive. It's used to capture process information.
+
+- process_info=$(ps ax -o pid,rss,pcpu,ucmd --sort=-cpu,-rss | sed -n "$i,$i p" | awk '{printf "%s: %smo: %s%%", $4, $2/1024, $3 }'): This line captures process information using the ps command with specific options to format the output, sort by CPU and memory usage, and extracts the line corresponding to the current iteration ($i). The sed command filters the output to extract the desired line, and awk is used to format the output.
+
+- formatted_line="$current_date $process_info": This line combines the current date with the captured process information into the variable formatted_line.
+
+- append_tabbed "$formatted_line" 3: This line appends the formatted line to the window created earlier. It's likely a function provided by the simple_curses.sh script.
+
+- done: This marks the end of the loop.
+
+- endwin: This line marks the end of the window creation process.
+
+- }: This marks the end of the main function.
+
+- main_loop: This likely starts a loop to continuously run the main function, allowing the user interface to remain open and responsive.
 
 
 
