@@ -58,7 +58,12 @@ Check the owner and the groups: Get-Acl
 Change the file owner to the built-in administrator (administrator account is disabled by default, check how to enable it. Don't forget to set a strong password!): 
 - elu -Name "Administrator" short for Enable-LocalUser -Name "Administrator"
 - slu -Name "Administrator" -Password (ConvertTo-SecureString "BeCode" -AsPlainText -Force) short for Set-LocalUser -Name "Administrator" -Password (ConvertTo-SecureString "BeCode" -AsPlainText -Force)
+- $acl = Get-Acl -Path "new.txt"
+- $newOwner.SetOwner($newOwner)
+- Set-Acl -Path "new.txt" -AclObject $acl
+- acl.owner
 
+https://petri.com/how-to-use-powershell-to-manage-folder-permissions/
 
 
 
@@ -103,6 +108,9 @@ Install Chocolatey:
   - Verify Installation: vlc
 
 
+Get-WindowsOptionalFeature -Online
+
+dism.exe /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
 
 
 # Powershell Environment Variables
