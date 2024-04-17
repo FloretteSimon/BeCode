@@ -80,11 +80,10 @@ Install the PSWindowsUpdate module:
 - Import the Module: Import-Module -Name PSWindowsUpdate
 
 - Check Execution Policy: Ensure that your PowerShell execution policy allows script execution: Get-ExecutionPolicy
-
-
-Type Get-WindowsUpdate to check for updates
+  
 
 Type Get-WindowsUpdate to check for updates
+
 
 Install Chocolatey: 
 - Enable Execution of PowerShell Scripts (if not already enabled): Set-ExecutionPolicy Bypass -Scope Process -Force
@@ -126,6 +125,11 @@ Create a variable by typing $env:test = "hello powershell". Check the variable y
 
 Now we will add something to this variable by typing $env:test += " Becode". Check the variable
 
+There is one really important environment variable : $env:path. This variable store the location where windows looks for files that are not in your current folder. For example, if you call VSCode from the powershell terminal, it opens it even if the executable isn't present in the current folder. That's because the path to the vscode's executable is stored in $env:path. Now download an executable software (rufus for example) and copy it on your desktop. If you try from a command line to launch it, it will fail with a command not found (if you are not in the same folder).
+
+- Invoke-WebRequest -Uri "https://github.com/pbatard/rufus/releases/download/v3.15/rufus-3.15.exe" -OutFile "$env:TEMP\rufus.exe"
+
+- Copy-Item -Path "$env:TEMP\rufus.exe" -Destination "$env:USERPROFILE\Desktop\rufus.exe"
 
 
 
