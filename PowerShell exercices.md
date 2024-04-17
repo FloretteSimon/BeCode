@@ -1,4 +1,4 @@
-# Powershell RTFM
+  # Powershell RTFM
 
 Get-Help: It displays information about PowerShell commands and concepts. 
 
@@ -63,10 +63,44 @@ Change the file owner to the built-in administrator (administrator account is di
 
 
 
+# Powershell Package Management
+
+Install the PSWindowsUpdate module:
+- Check if the Module is Installed: First, confirm whether the "PSWindowsUpdate" module is installed on your system. :
+  
+    Get-Module -Name PSWindowsUpdate -ListAvailable
+  
+- Install the Module: Install-Module -Name PSWindowsUpdate
+
+- Import the Module: Import-Module -Name PSWindowsUpdate
+
+- Check Execution Policy: Ensure that your PowerShell execution policy allows script execution: Get-ExecutionPolicy
 
 
+Type Get-WindowsUpdate to check for updates
 
+Type Get-WindowsUpdate to check for updates
 
+Install Chocolatey: 
+- Enable Execution of PowerShell Scripts (if not already enabled): Set-ExecutionPolicy Bypass -Scope Process -Force
+
+- Install Chocolatey: Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+  
+    The command consists of multiple parts:
+  
+    Set-ExecutionPolicy Bypass -Scope Process -Force: Bypasses the execution policy.
+  
+    [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072: Updates the security protocol to ensure compatibility with Chocolatey's installation script. This step is necessary due to changes in security protocols over time.
+  
+    iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')): Invokes the execution of the Chocolatey installation script downloaded from the specified URL using Invoke-Expression (abbreviated as iex). This downloads and executes the script.
+
+- Verify Installation: choco -?
+
+  Install VLC from Chocolatey:
+
+  - Before installing VLC, ensure that there is a Chocolatey package available for it: choco search vlc
+  - Install VLC Package: choco install vlc
+  - Verify Installation: vlc
 
 
 
@@ -74,9 +108,11 @@ Change the file owner to the built-in administrator (administrator account is di
 # Powershell Environment Variables
 
 Type echo $env:computername: 
+
 <img width="393" alt="Capture d’écran 2024-04-15 à 15 37 19" src="https://github.com/FloretteSimon/BeCode/assets/155719677/d9d94ca8-59d0-43b7-a71f-42ab68e3abcd">
 
 Create a variable by typing $env:test = "hello powershell". Check the variable you just created the same way you did with the computer name
+
 <img width="410" alt="Capture d’écran 2024-04-15 à 15 38 40" src="https://github.com/FloretteSimon/BeCode/assets/155719677/f2beb3f5-bbfe-4670-81cb-d5ef98cfa49b">
 
 
