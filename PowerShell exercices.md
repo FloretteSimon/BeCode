@@ -1,4 +1,4 @@
-  # Powershell RTFM
+# Powershell RTFM
 
 Get-Help: It displays information about PowerShell commands and concepts. 
 
@@ -109,7 +109,11 @@ Install Chocolatey:
 
 Get-WindowsOptionalFeature -Online
 
-dism.exe /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
+Enable-WindowsOptionalFeature -FeatureName Hyper-V -Online
+
+or
+
+dism.exe /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-Vµ
 
 
 # Powershell Environment Variables
@@ -131,8 +135,43 @@ There is one really important environment variable : $env:path. This variable st
 
 - Copy-Item -Path "$env:TEMP\rufus.exe" -Destination "$env:USERPROFILE\Desktop\rufus.exe"
 
+Try to happen the $env:path to add the path to rufus' executable (It should be something like this if you copied it on your desktop : C:\Users\Username\Desktop)
+
+$rufusPath = "$env:C:\Users\flore\Desktop\rufus.exe"
+
+if (-not ($env:Path -split ';' | Select-String -Pattern "$env:flore\Desktop")) {
+    $env:Path += ";$rufusPath"
+    [System.Environment]::SetEnvironmentVariable("Path", $env:Path, "User")
+}
 
 
+Assigning a value to $rufusPath:
+
+
+$rufusPath = "$env:C:\Users\flore\Desktop\rufus.exe"
+This line of code creates a variable named $rufusPath and assigns it the value of the path to the Rufus executable. The path is constructed using string interpolation ("$env:...") to insert the value of the environment variable $env:C:\Users\flore\Desktop\rufus.exe.
+Checking if Rufus path is not already in $env:Path:
+
+
+if (-not ($env:Path -split ';' | Select-String -Pattern "$env:flore\Desktop")) {
+This line starts an if statement that checks whether the path to the Rufus executable ($env:flore\Desktop) is already included in the $env:Path environment variable.
+$env:Path -split ';' splits the value of $env:Path into an array of individual paths using semicolon (;) as the delimiter.
+Select-String -Pattern "$env:flore\Desktop" searches for the pattern "$env:flore\Desktop" (which resolves to the path to the desktop folder of the user named "flore") in the array of paths.
+-not negates the condition, so the if block will execute if the path is not found in $env:Path.
+Adding Rufus path to $env:Path:
+
+
+$env:Path += ";$rufusPath"
+This line of code appends the path to the Rufus executable ($rufusPath) to the $env:Path environment variable. The semicolon (;) acts as a delimiter between paths.
+Updating the environment variable:
+
+
+[System.Environment]::SetEnvironmentVariable("Path", $env:Path, "User")
+This line uses the [System.Environment]::SetEnvironmentVariable() method to update the value of the Path environment variable with the modified $env:Path.
+The third argument "User" specifies that the change should be applied to the user-level environment variables. This ensures that the change persists for the current user session.
+
+
+In summary, this script checks if the path to the Rufus executable is already included in the system's PATH environment variable. If not, it adds the path to the Rufus executable to the PATH variable and updates the environment variable to reflect the change, ensuring that the Rufus executable can be executed from any directory without specifying its full path.
 
 
 
