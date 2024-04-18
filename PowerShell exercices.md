@@ -175,6 +175,9 @@ In summary, this script checks if the path to the Rufus executable is already in
 
 
 
+https://learn.microsoft.com/en-us/windows/deployment/usmt/usmt-recognized-environment-variables
+
+
 
 
 
