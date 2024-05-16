@@ -24,8 +24,14 @@ file:///Users/flolaya/Downloads/TestPhisingDog.html
 <img width="1440" alt="Capture d’écran 2024-05-15 à 12 26 52" src="https://github.com/FloretteSimon/BeCode/assets/155719677/937cdcbb-7b9e-4e5b-9d71-e4fca21112fc">
 
 
+3: Host the site
 
-3: Create HTML for the mail:
+000webhost.com
+
+Link https://himidogbobbob.000webhostapp.com/TestPhisingDog.html inside the html 
+
+
+4: Create HTML for the mail:
 
 
 <img width="1162" alt="Capture d’écran 2024-05-15 à 12 25 26" src="https://github.com/FloretteSimon/BeCode/assets/155719677/1cb0f208-16f9-4d01-a17a-d72b35937cd7">
