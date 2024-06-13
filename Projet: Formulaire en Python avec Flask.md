@@ -31,3 +31,92 @@ De vous protéger contre les failles XSS
 De vous protéger contre une attaque SSTI
 Utilser un micro famework
 Faire un déployement
+
+
+
+
+# Link:
+https://www.youtube.com/watch?v=5aYpkLfkgRE
+https://www.youtube.com/playlist?list=PLV1TsfPiCx8PXHsHeJKvSSC8zfi4Kvcfs
+
+
+
+# Steps:
+
+pip3 install flask
+
+
+pip3 install requests: "requests" is a popular Python library for making HTTP requests. It simplifies interaction with web services by providing a user-friendly interface for sending HTTP requests (GET, POST, PUT, DELETE, etc.) and managing responses.
+
+## code flask py
+from flask import Flask
+
+
+app = Flask(__name__)
+
+## template Formulaire.html
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - Hackers Poulette™</title>
+</head>
+<body>
+    <h1>Formulaire de contact</h1>
+    <form action="" method="">
+        <!-- Nom -->
+        <p>
+            <!--Champs de type "text" -->
+            <label for="nom">Nom: </label>
+            <input type="text" name="nom" id="nom">
+        </p>
+        <!-- Prénom -->
+        <p>
+            <!--Champs de type "text" -->
+            <label for="prénom">Prénom: </label>
+            <input type="text" name="prénom" id="prénom">
+        </p>
+        <!-- Email -->
+        <p>
+            <!--Champs de type "email" -->
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email">
+        </p>
+
+        <!-- Message -->
+        <p>
+            <!--Zone de texte pour laisser un message avec <textarea> -->
+            <label for="message">Ecrire un message: </label>
+            <textarea name="message" id="message" rows="6" cols="50"</textarea>
+        </p>
+        <!-- Genre -->
+        <p>
+            <!--Champs de type "radio" -->
+            Genre:
+            <input type="radio" name="choix-genre" value="1" id="homme">
+            <label for="homme">H</label>
+            <input type="radio" name="choix-genre" value="2" id="femme">
+            <label for="femme">F</label>
+        </p>
+        <!-- Sujet -->
+        <p>
+            <!--Choix dans une liste d'options avec la balise <select> -->
+            <label for="sujet">Sujet: </label>
+            <select name="choix" id="sujet">
+                <option value="réparation">Réparation</option>
+                <option value="commande">Commande</option>
+                <option value="autre">Autre</option>
+            </select>
+        </p>
+        <!-- Bouton d'envoi -->
+        <p>
+            <!-- Bouton d'envoi du formulaire <submit> -->
+            <input type="submit" value="Envoyer le formulaire">
+        </p>
+    </form>
+</body>
+
+
+
