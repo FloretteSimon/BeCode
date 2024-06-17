@@ -439,3 +439,37 @@ if __name__ == '__main__': -> Vérifie si le script est exécuté directement (e
 <img width="603" alt="Capture d’écran 2024-06-14 à 14 04 27" src="https://github.com/FloretteSimon/BeCode/assets/155719677/e4c5d3a2-0029-4f9f-82a5-c5f37135c1d2">
 
 
+
+# Questions/Réponses:
+
+- Différence entre une requête POST et une requête GET:
+  Requête GET:
+  But : Récupérer des données du serveur.
+  Transmission de données : Via l'URL.
+  Visibilité des données : Visible dans l'URL.
+  Cache : Peut être mise en cache.
+  Idempotence : Idempotente (répéter la requête a le même effet).
+  Sécurité : Moins sécurisé pour des données sensibles.
+
+  Requête POST
+  But : Envoyer des données au serveur (souvent pour créer ou mettre à jour des ressources).
+  Transmission de données : Dans le corps de la requête.
+  Visibilité des données : Non visible dans l'URL.
+  Cache : Généralement non mise en cache.
+  Idempotence : Non idempotente (chaque requête peut avoir un effet différent).
+  Sécurité : Plus sécurisé pour des données sensibles.
+
+
+- Protéger contre les failles XSS:
+  
+  def sanitize_input(input_string):
+  
+    return re.sub(r'<.*?>', '', input_string)
+
+
+
+- Protéger contre une attaque SSTI:
+ ° Utilisez des templates de fichier avec render_template.
+ ° Évitez d'insérer directement des entrées utilisateur dans les templates.
+ ° Validez et échappez toujours les entrées utilisateur.
+ ° Utilisez les filtres d'échappement fournis par Jinja2 (comme | e).
