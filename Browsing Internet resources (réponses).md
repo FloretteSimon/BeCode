@@ -45,6 +45,8 @@ Phitrust
 
 <img width="1130" alt="Capture d’écran 2024-07-16 à 11 21 49" src="https://github.com/user-attachments/assets/10f30a44-ff84-47f2-9de1-9bd7f11a7b11">
 
-Who are the founders of BeCode?
+## Who are the founders of BeCode?
+
 Karen Boers, Laurent Hublet et Rodolphe Verhaegen
+
 <img width="574" alt="Capture d’écran 2024-07-16 à 11 23 07" src="https://github.com/user-attachments/assets/adff1821-63f3-4ed6-a5da-8fdcd2ecb785">
