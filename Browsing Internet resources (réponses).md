@@ -9,7 +9,7 @@ https://whois.domaintools.com/facebook.com
 https://whois.domaintools.com/becode.org
 <img width="512" alt="Capture d’écran 2024-07-16 à 11 03 59" src="https://github.com/user-attachments/assets/128e337f-ba1c-4871-a37a-2455e9525f9a">
 
-##Which city is the registrant based for microsoft.com ?
+## Which city is the registrant based for microsoft.com ?
 Redmond
 
 <img width="518" alt="Capture d’écran 2024-07-16 à 11 05 38" src="https://github.com/user-attachments/assets/66f6c889-6f5d-4a23-873b-90a805bb3177">
