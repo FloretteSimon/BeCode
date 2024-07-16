@@ -32,6 +32,9 @@ msnhst@microsoft.com
 ## Which subdomain of becode.org starts with d and ends with n?
 dokiman.becode.org
 
+<img width="1100" alt="Capture d’écran 2024-07-16 à 11 34 25" src="https://github.com/user-attachments/assets/1ae8eec3-b935-445d-8eff-2428d406a036">
+
+
 ## Among the BeCode team, who is a fan of Oscar Wilde ?
 
 recherche google -> site:becode.org Oscar Wilde
