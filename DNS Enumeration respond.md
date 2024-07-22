@@ -11,26 +11,26 @@ BC{DESCRIPTIVE-DOMAIN-TXT}
 4. What are the MX records of becode.org ?
 dig mx becode.org
 
-becode.org.             2228    IN      MX      5 alt1.aspmx.l.google.com.
-becode.org.             2228    IN      MX      10 alt4.aspmx.l.google.com.
-becode.org.             2228    IN      MX      1 aspmx.l.google.com.
-becode.org.             2228    IN      MX      10 alt3.aspmx.l.google.com.
-becode.org.             2228    IN      MX      5 alt2.aspmx.l.google.com.
+- alt1.aspmx.l.google.com.
+- alt4.aspmx.l.google.com.
+- aspmx.l.google.com.
+- alt3.aspmx.l.google.com.
+- alt2.aspmx.l.google.com.
 
 
 6. What are the MX records of adlp-corp.com ?
 dig mx adlp-corp.com
 
-adlp-corp.com.          377     IN      MX      10 alt3.aspmx.l.google.com.
-adlp-corp.com.          377     IN      MX      5 alt2.aspmx.l.google.com.
-adlp-corp.com.          377     IN      MX      5 alt1.aspmx.l.google.com.
-adlp-corp.com.          377     IN      MX      10 alt4.aspmx.l.google.com.
-adlp-corp.com.          377     IN      MX      1 aspmx.l.google.com.
+- alt3.aspmx.l.google.com.
+- alt2.aspmx.l.google.com.
+- alt1.aspmx.l.google.com.
+- alt4.aspmx.l.google.com.
+- aspmx.l.google.com.
 
 8. What is the first NS name server of adlp-corp.com?
 dig NS adlp-corp.com
 
-adlp-corp.com.          4502    IN      NS      ns-269.awsdns-33.com.
+ns-269.awsdns-33.com.
 
 10. Uses a brute force tool to find subdomains of adlp-corp.com. How many did you find?
 nmap -p 53 --script dns-brute adlp-corp.com
