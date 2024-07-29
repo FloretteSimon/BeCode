@@ -1,38 +1,40 @@
+# Comparatif des Cadres de Cybersécurité
 
+| **Cadre**           | **Objectif Principal**                                    | **Contenu**                                               | **Utilisation Principale**                            | **Points Forts**                                      | **Points Communs**                                        |
+|---------------------|-----------------------------------------------------------|-----------------------------------------------------------|------------------------------------------------------|-------------------------------------------------------|------------------------------------------------------------|
+| **ATT&CK**          | Décrire les tactiques, techniques et procédures des attaquants | Tactiques, Techniques, Procédures (TTPs)                   | Comprendre et anticiper les comportements des attaquants | Grande bibliothèque de TTPs, mise à jour régulière   | Utilisés pour améliorer la cybersécurité, part de MITRE |
+| **CAR**             | Fournir des analyses de sécurité prêtes à l'emploi        | Règles, requêtes, scripts d'analyse                       | Détection en temps réel et réponse aux incidents      | Analyses concrètes et applicables immédiatement      | Utilisés pour améliorer la cybersécurité, part de MITRE |
+| **MITRE ENGAGE**    | Aider les défenseurs à interagir avec les attaquants      | Stratégies d'interaction et de manipulation               | Interaction proactive avec les attaquants            | Approche proactive pour perturber les attaquants      | Utilisés pour améliorer la cybersécurité, part de MITRE |
+| **D3FEND**          | Cartographier les contre-mesures défensives               | Techniques défensives et contre-mesures                    | Développer et implémenter des mesures de défense     | Structure claire des techniques défensives            | Utilisés pour améliorer la cybersécurité, part de MITRE |
 
+## Détails
 
+### ATT&CK
+- **Objectif** : Fournir une description détaillée des TTPs utilisées par les cyberattaquants.
+- **Contenu** : Contient des matrices de tactiques et techniques, classées par phase d'attaque.
+- **Utilisation** : Utilisé pour la modélisation des menaces, l'amélioration des détections, et la formation en cybersécurité.
+- **Points Forts** : Excellente ressource pour comprendre les attaques, constamment mis à jour avec les dernières informations.
 
+### Cyber Analytics Repository (CAR)
+- **Objectif** : Proposer des analyses prêtes à l'emploi pour la détection de menaces.
+- **Contenu** : Inclut des règles d'analyse, des requêtes de détection, et des scripts.
+- **Utilisation** : Implémenté dans des systèmes de surveillance pour détecter des comportements suspects en temps réel.
+- **Points Forts** : Fournit des outils pratiques et immédiatement utilisables pour les analystes en sécurité.
 
-### Détails
+### MITRE ENGAGE
+- **Objectif** : Aider les défenseurs à interagir de manière proactive avec les attaquants pour perturber leurs opérations.
+- **Contenu** : Stratégies et techniques d'engagement et de manipulation des attaquants.
+- **Utilisation** : Utilisé pour la cyberdéfense active, en perturbant les activités des attaquants.
+- **Points Forts** : Permet une défense proactive et perturbatrice, ajoutant une nouvelle dimension à la cybersécurité traditionnelle.
 
-1. **ATT&CK** :
-   - **Objectif** : Fournir une description détaillée des TTPs utilisées par les cyberattaquants.
-   - **Contenu** : Contient des matrices de tactiques et techniques, classées par phase d'attaque.
-   - **Utilisation** : Utilisé pour la modélisation des menaces, l'amélioration des détections, et la formation en cybersécurité.
-   - **Points Forts** : Excellente ressource pour comprendre les attaques, constamment mis à jour avec les dernières informations.
+### D3FEND
+- **Objectif** : Cartographier les différentes contre-mesures défensives disponibles.
+- **Contenu** : Techniques défensives et contre-mesures associées aux TTPs.
+- **Utilisation** : Aider à développer, implémenter et structurer des mesures de défense efficaces.
+- **Points Forts** : Offre une structure claire et organisée des techniques défensives, facilitant leur compréhension et leur mise en œuvre.
 
-2. **Cyber Analytics Repository (CAR)** :
-   - **Objectif** : Proposer des analyses prêtes à l'emploi pour la détection de menaces.
-   - **Contenu** : Inclut des règles d'analyse, des requêtes de détection, et des scripts.
-   - **Utilisation** : Implémenté dans des systèmes de surveillance pour détecter des comportements suspects en temps réel.
-   - **Points Forts** : Fournit des outils pratiques et immédiatement utilisables pour les analystes en sécurité.
-
-3. **MITRE ENGAGE** :
-   - **Objectif** : Aider les défenseurs à interagir de manière proactive avec les attaquants pour perturber leurs opérations.
-   - **Contenu** : Stratégies et techniques d'engagement et de manipulation des attaquants.
-   - **Utilisation** : Utilisé pour la cyberdéfense active, en perturbant les activités des attaquants.
-   - **Points Forts** : Permet une défense proactive et perturbatrice, ajoutant une nouvelle dimension à la cybersécurité traditionnelle.
-
-4. **D3FEND** :
-   - **Objectif** : Cartographier les différentes contre-mesures défensives disponibles.
-   - **Contenu** : Techniques défensives et contre-mesures associées aux TTPs.
-   - **Utilisation** : Aider à développer, implémenter et structurer des mesures de défense efficaces.
-   - **Points Forts** : Offre une structure claire et organisée des techniques défensives, facilitant leur compréhension et leur mise en œuvre.
-
-### Points Communs
+## Points Communs
 
 - **Propriété de MITRE** : Tous ces cadres sont développés par MITRE, une organisation à but non lucratif qui soutient la recherche en cybersécurité.
 - **Objectif de Cybersécurité** : Chaque cadre vise à améliorer la cybersécurité en fournissant des ressources et des informations précieuses pour comprendre, détecter, et contrer les cyberattaques.
 - **Complémentarité** : Ces cadres sont complémentaires et peuvent être utilisés ensemble pour créer une stratégie de cybersécurité plus robuste et complète.
-
-En résumé, chacun de ces cadres apporte des éléments spécifiques pour renforcer la cybersécurité, et leur utilisation combinée permet de couvrir un large spectre de besoins allant de la compréhension des attaques à la mise en place de défenses efficaces.
