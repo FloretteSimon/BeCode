@@ -1,11 +1,7 @@
-Voici un tableau comparatif des cadres ATT&CK, Cyber Analytics Repository (CAR), MITRE ENGAGE et D3FEND, en termes de différences, points communs et points forts.
 
-| **Cadre**           | **Objectif Principal**                                    | **Contenu**                                               | **Utilisation Principale**                            | **Points Forts**                                      | **Points Communs**                                        |
-|---------------------|-----------------------------------------------------------|-----------------------------------------------------------|------------------------------------------------------|-------------------------------------------------------|------------------------------------------------------------|
-| **ATT&CK**          | Décrire les tactiques, techniques et procédures des attaquants | Tactiques, Techniques, Procédures (TTPs)                   | Comprendre et anticiper les comportements des attaquants | Grande bibliothèque de TTPs, mise à jour régulière   | Utilisés pour améliorer la cybersécurité, part de MITRE |
-| **CAR**             | Fournir des analyses de sécurité prêtes à l'emploi        | Règles, requêtes, scripts d'analyse                       | Détection en temps réel et réponse aux incidents      | Analyses concrètes et applicables immédiatement      | Utilisés pour améliorer la cybersécurité, part de MITRE |
-| **MITRE ENGAGE**    | Aider les défenseurs à interagir avec les attaquants      | Stratégies d'interaction et de manipulation               | Interaction proactive avec les attaquants            | Approche proactive pour perturber les attaquants      | Utilisés pour améliorer la cybersécurité, part de MITRE |
-| **D3FEND**          | Cartographier les contre-mesures défensives               | Techniques défensives et contre-mesures                    | Développer et implémenter des mesures de défense     | Structure claire des techniques défensives            | Utilisés pour améliorer la cybersécurité, part de MITRE |
+
+
+
 
 ### Détails
 
