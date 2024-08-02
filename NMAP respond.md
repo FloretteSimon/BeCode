@@ -50,30 +50,4 @@ nmap -p 3306 --script mysql-info 10.12.1.36
 
 Salt: [Vy"86C.[`QT5HIx?q;r
 
-12. What is the domain name ?
 
-Your response
-
-What is the FQDN of the box ?
-
-Your response
-
-What is the os version ?
-
-Your response
-
-What is the version of Samba ?
-
-Your response
-
-Wat is the name of the box ?
-
-Your response
-
-Do a scan on the subnet 10.xx.1.0/24. How many IP addresses respond? What command did you use? Charleroi : 10.11.0.1/24 Bruxelles : 10.12.0.1/24 Ghent : 10.13.0.1/24
-
-Your response
-
-Do the same thing but with the top port option at 10. What command did you use?
-
-Your response
