@@ -1,4 +1,3 @@
-Voici un tableau plus détaillé incluant les commandes les plus couramment utilisées de Snort, leur utilité, ainsi que leurs avantages et inconvénients par rapport à d'autres outils :
 
 | **Commande Snort**         | **Description**                                      | **Utilité**                                    | **Avantages**                                             | **Inconvénients**                                          | **Comparaison avec d'autres outils**                |
 |----------------------------|------------------------------------------------------|------------------------------------------------|----------------------------------------------------------|-----------------------------------------------------------|-----------------------------------------------------|
