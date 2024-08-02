@@ -1,7 +1,6 @@
 
 | **Aspect**                  | **Détails**                                                                                      |
 |-----------------------------|--------------------------------------------------------------------------------------------------|
-| **Pourquoi Utiliser Splunk**|                                                                                                  |
 | **Centralisation des Logs** | Splunk permet de collecter et d'indexer des données provenant de diverses sources en un seul endroit, facilitant la gestion des logs. |
 | **Analyse en Temps Réel**   | Permet de surveiller les événements en temps réel et de détecter rapidement des anomalies ou des incidents de sécurité.                 |
 | **Recherche et Correlation** | Les fonctionnalités de recherche et de corrélation permettent d'identifier des motifs et des tendances dans les données pour détecter des incidents potentiels. |
