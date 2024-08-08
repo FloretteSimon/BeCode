@@ -120,5 +120,5 @@ Autonomous vehicles collect and transmit large amounts of data, including person
      . Reward: The researchers received a $375,000 reward for discovering and demonstrating the vulnerability, highlighting the importance of cybersecurity research in improving product security.
 
 
-   - Funny fact: https://www.securityweek.com/200000-awarded-at-pwn2own-2024-for-tesla-hack/#:~:text=Participants%20have%20earned%20more%20than,pieces%20of%20widely%20used%20software.
+   - 2024: https://www.securityweek.com/200000-awarded-at-pwn2own-2024-for-tesla-hack/#:~:text=Participants%20have%20earned%20more%20than,pieces%20of%20widely%20used%20software.
          
