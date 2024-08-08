@@ -35,16 +35,4 @@ ns-269.awsdns-33.com.
 10. Uses a brute force tool to find subdomains of adlp-corp.com. How many did you find?
 nmap -p 53 --script dns-brute adlp-corp.com
 
-5
 
-12. Use theHarvester tool at becode.org. How many Linkedin Users?
-Your response Your command
-
-13. Use theHarvester tool at becode.org. How many ip addresses did you find?
-Your response Your command
-
-14. Write a small script to attempt a zone transfer from adlp-corp.com using a higher-level scripting language such as Python, Perl, or Ruby
-Your Script
-
-15. Write a small script to attempt a brute force search for subdomains using a higher level scripting language such as Python, Perl or Ruby.
-Your Script
