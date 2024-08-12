@@ -1,4 +1,4 @@
-## Qu'est-ce qu'un SOC et quel est le rôle d'un analyste SOC ?
+## 1. Qu'est-ce qu'un SOC et quel est le rôle d'un analyste SOC ?
 
 Un SOC (Security Operations Center) est une équipe chargée de surveiller et de protéger les systèmes informatiques d'une organisation contre les menaces de sécurité. 
 En tant qu'analyste SOC, mon rôle consiste à détecter, analyser, et répondre aux incidents de sécurité en temps réel, en utilisant des outils comme les SIEM pour identifier les activités suspectes, contenir les menaces, et assurer la sécurité des données.
@@ -12,7 +12,7 @@ Les menaces internes viennent de l'intérieur de l'organisation, souvent de la p
 En résumé, les menaces externes proviennent de l'extérieur et cherchent à pénétrer le système, tandis que les menaces internes exploitent un accès déjà existant.
 
 
-## Peux-tu expliquer le processus de gestion des incidents de sécurité ?
+## 2. Peux-tu expliquer le processus de gestion des incidents de sécurité ?
 
 Le processus de gestion des incidents de sécurité comprend généralement les étapes suivantes :
 
@@ -29,7 +29,7 @@ Le processus de gestion des incidents de sécurité comprend généralement les 
 6. **Documentation** : Rédaction d'un rapport détaillé sur l'incident, les actions prises et les leçons apprises.
 
 
-## Qu'est-ce qu'un SIEM (Security Information and Event Management) et comment fonctionne-t-il ?
+## 3. Qu'est-ce qu'un SIEM (Security Information and Event Management) et comment fonctionne-t-il ?
 
 Un SIEM (Security Information and Event Management) est une solution qui centralise la collecte, l'analyse et la gestion des logs et des événements de sécurité provenant de divers systèmes informatiques d'une organisation. Il permet de détecter des anomalies et des menaces potentielles en temps réel.
 
@@ -46,7 +46,7 @@ Fonctionnement d'un SIEM :
 - **Reporting et conservation** : Le SIEM conserve un historique des événements et génère des rapports pour aider à l'analyse post-incident et à la conformité réglementaire.
 
 
-## Comment détecterais-tu un comportement anormal dans un réseau ?
+## 4. Comment détecterais-tu un comportement anormal dans un réseau ?
 
 Pour détecter un comportement anormal dans un réseau, voici les étapes clés :
 
@@ -63,7 +63,7 @@ Pour détecter un comportement anormal dans un réseau, voici les étapes clés 
 6. **Analyse manuelle :** Enquêter plus en profondeur sur les alertes pour confirmer si elles sont légitimes ou s'il s'agit de faux positifs.
 
 
-## Peux-tu décrire les types de cyberattaques les plus courants et comment les contrer ?
+## 5. Peux-tu décrire les types de cyberattaques les plus courants et comment les contrer ?
 
 Voici les types de cyberattaques les plus courants et les méthodes pour les contrer :
 
@@ -98,7 +98,7 @@ Voici les types de cyberattaques les plus courants et les méthodes pour les con
 Ces contre-mesures combinées à une sensibilisation continue et à des politiques de sécurité rigoureuses permettent de réduire efficacement le risque de cyberattaques.
 
 
-## Quelle est la différence entre un virus, un ver et un cheval de Troie ?
+## 6. Quelle est la différence entre un virus, un ver et un cheval de Troie ?
 
 Voici la différence entre un virus, un ver, et un cheval de Troie :
 
@@ -117,7 +117,7 @@ Voici la différence entre un virus, un ver, et un cheval de Troie :
 En résumé, un virus a besoin de l'action de l'utilisateur pour se propager, un ver se propage automatiquement via les réseaux, et un cheval de Troie trompe l'utilisateur en se faisant passer pour un programme légitime.
 
 
-## Qu'est-ce que l'analyse des logs et pourquoi est-elle importante dans un SOC ?
+## 7. Qu'est-ce que l'analyse des logs et pourquoi est-elle importante dans un SOC ?
 
 **L'analyse des logs** est le processus de collecte, d'examen et d'interprétation des journaux d'événements générés par divers systèmes et applications au sein d'une organisation. Ces logs peuvent provenir de serveurs, pare-feu, routeurs, applications, bases de données, et autres composants du réseau.
 
@@ -136,7 +136,7 @@ En résumé, un virus a besoin de l'action de l'utilisateur pour se propager, un
 En somme, l'analyse des logs est essentielle pour une surveillance efficace, une réponse rapide aux incidents, et une gestion proactive de la sécurité dans un SOC.
 
 
-## Connais-tu les différents types de pare-feu et leurs fonctions ?
+## 8. Connais-tu les différents types de pare-feu et leurs fonctions ?
 
 Oui, il existe plusieurs types de pare-feu, chacun ayant des fonctions spécifiques pour protéger un réseau. Voici les principaux types de pare-feu et leurs fonctions :
 
