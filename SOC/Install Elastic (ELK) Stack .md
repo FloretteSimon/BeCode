@@ -155,3 +155,53 @@ sudo systemctl status kibana
 ip:5601/app/home#/
 
 <img width="936" alt="Capture d’écran 2024-08-21 à 11 14 30" src="https://github.com/user-attachments/assets/573b3616-8fcb-4976-b679-34b8a9647b44">
+
+
+## 23.  SSH into your web server and install Filebeat:
+
+curl -L -O wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.6.1-arm64.deb
+
+sudo dpkg -i filebeat-8.6.1-arm64.deb
+
+
+## 24. Open up Filebeat’s configuration file:
+
+sudo nano /etc/filebeat/filebeat.yml
+
+## 25. In the file, set enabled to true and add the apache2 logpath:
+
+<img width="842" alt="Capture d’écran 2024-08-21 à 11 46 39" src="https://github.com/user-attachments/assets/284e6c2f-c131-4b71-b334-dbbae842fbcf">
+
+<img width="784" alt="Capture d’écran 2024-08-21 à 11 47 40" src="https://github.com/user-attachments/assets/8856cb95-772d-4872-84ba-be6f51ee42dd">
+
+
+## 26. Enable and start Filebeat:
+
+sudo systemctl enable filebeat && sudo systemctl start filebeat
+
+
+## 27. Check the status:
+
+sudo systemctl status filebeat
+
+
+## 28. Filebeat comes pre-installed with some modules for sending logs. You can check all the modules available with:
+
+sudo filebeat modules list
+
+## 29. We’re only interested in System and Apache server logs, so let’s enable them:
+
+sudo filebeat modules enable system
+sudo filebeat modules enable apache
+
+
+
+Check that the modules you enabled fall under “enabled” when you execute the modules list command. Now that we’ve enabled the modules, we have to turn them on. There are two files: /etc/filebeat/modules.d/system.yml and /etc/filebeat/modules.d/apache.yml.
+
+Open these with nano and set enabled to true. Here’s the apache.yml configuration, for example. For the system.yml configuration, after you’ve set enabled to true for syslog and authlog, leave the paths alone since the Filebeat default is good; however, make sure you explicitly add the paths in the apache.yml configuration as seen below (and don’t forget the brackets and quotes – this took me awhile to troubleshoot!).
+
+
+sudo filebeat setup --index-management -E output.logstash.enabled=false -E 'output.elasticsearch.hosts=["192.168.x.x:9200"]'
+And finally, load dashboards into Kibana.
+
+sudo filebeat setup -E output.logstash.enabled=false -E output.elasticsearch.hosts=['192.168.x.x:9200'] -E setup.kibana.host=192.168.x.x:5601
