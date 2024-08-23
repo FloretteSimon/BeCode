@@ -31,6 +31,9 @@ git checkout v7.0.0  # Checkout the specific version you need
 
 git submodule update --init --recursive
 
+sudo apt update
+
+sudo apt install swig
 
 ## 5. Proceed with the build:
 
